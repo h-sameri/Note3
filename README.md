@@ -8,11 +8,11 @@ To install and run Note3 locally, follow the steps below:
 
 1. Clone the repository from GitHub:
    ```
-   git clone https://github.com/h-sameri/note3.git
+   git clone https://github.com/h-sameri/Note3.git
    ```
 2. Navigate to the project directory:
    ```
-   cd note3
+   cd Note3
    ```
 3. Install the dependencies using npm or pnpm or yarn:
    ```
