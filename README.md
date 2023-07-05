@@ -1,7 +1,7 @@
 # Note3 - Decentralized & Safe Notes
 
 Note3 is a web3 note-taking application that introduces a decentralized, permanent, and secure approach to note-taking.
-With Note3, all notes encrypted with a wallet-base generated key and are stored
+With Note3, all notes are encrypted with a wallet-base generated key and are stored
 on [WeaveDB](https://github.com/weavedb/weavedb): a decentralized web3 database.
 
 ## Demo video
