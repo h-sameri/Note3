@@ -1,6 +1,12 @@
 # Note3 - Decentralized & Safe Notes
 
-Note3 is a web3 note-taking application that introduces a decentralized, permanent, and secure approach to note-taking.  With Note3, all notes encrypted with a wallet-base generated key and are stored on [WeaveDB](https://github.com/weavedb/weavedb): a decentralized web3 database.
+Note3 is a web3 note-taking application that introduces a decentralized, permanent, and secure approach to note-taking.
+With Note3, all notes encrypted with a wallet-base generated key and are stored
+on [WeaveDB](https://github.com/weavedb/weavedb): a decentralized web3 database.
+
+## Demo video
+
+**Demo video is available at [youtu.be/Z2G8wKRqzjE](https://youtu.be/Z2G8wKRqzjE)**
 
 ## Installation
 
@@ -31,10 +37,19 @@ Once you have installed Note3, you can run it locally by following these steps:
 
 ## Data Storage and Security
 
-Note3 stores your notes in WeaveDB, a decentralized NoSQL database powered by Arweave. This ensures that your data remains secure, permanent, and resistant to censorship. WeaveDB utilizes the decentralized nature of the Arweave blockchain, providing an immutable and reliable storage solution for your notes.
+Note3 stores your notes in WeaveDB, a decentralized NoSQL database powered by Arweave. This ensures that your data
+remains secure, permanent, and resistant to censorship. WeaveDB utilizes the decentralized nature of the Arweave
+blockchain, providing an immutable and reliable storage solution for your notes.
 
-To further enhance data security, Note3 encrypts and decrypts your notes using a user wallet-based private and public key generated pair. This means that only you can access and decrypt your notes. 
+To further enhance data security, Note3 encrypts and decrypts your notes using a user wallet-based private and public
+key generated pair. This means that only you can access and decrypt your notes.
+
+## Contributors
+
+- [Mehmaj](https://github.com/mehmaj)
+- [h-sameri](https://github.com/h-sameri)
 
 ## License
 
-Note3 is released under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute this software for any purpose. Refer to the [LICENSE](LICENSE) file for more information.
+Note3 is released under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and
+distribute this software for any purpose. Refer to the [LICENSE](LICENSE) file for more information.
