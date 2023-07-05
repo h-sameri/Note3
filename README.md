@@ -46,8 +46,8 @@ key generated pair. This means that only you can access and decrypt your notes.
 
 ## Contributors
 
-- [Mehmaj](https://github.com/mehmaj)
 - [h-sameri](https://github.com/h-sameri)
+- [Mehmaj](https://github.com/mehmaj)
 
 ## License
 
