@@ -126,6 +126,7 @@ export default function Home() {
     const handleLoginClick = async () => {
         try {
             await login()
+            await fetchAllNotes()
         } catch (e) {
             console.error("handleLoginClick", e)
         }
@@ -156,7 +157,7 @@ export default function Home() {
 
         try {
             await db.add(noteStruct, COLLECTION_NOTE, ...([user]))
-            await fetchAllNodes()
+            await fetchAllNotes()
         } catch (e) {
             console.error(e)
         }
@@ -180,7 +181,7 @@ export default function Home() {
         }
         try {
             await db.set(noteStruct, COLLECTION_NOTE, selectedId, ...([user]));
-            await fetchAllNodes()
+            await fetchAllNotes()
         } catch (e) {
             console.error(e)
         }
@@ -202,7 +203,7 @@ export default function Home() {
     const deleteClick = async () => {
         try {
             await db.delete(COLLECTION_NOTE, selectedId, ...(user !== null ? [user] : []))
-            await fetchAllNodes()
+            await fetchAllNotes()
             wipeSelected()
         } catch (e) {
             console.error(e)
@@ -234,7 +235,7 @@ export default function Home() {
     }
 
     // Function to retrieve all notes data from the database.
-    const fetchAllNodes = async () => {
+    const fetchAllNotes = async () => {
         try {
             // const res = await db.cget(COLLECTION_NOTE)
             if (user && user.wallet) {
@@ -286,7 +287,7 @@ export default function Home() {
     // Effect hook to retrieve notes data from the database on database initialization.
     useEffect(() => {
         if (initDb) {
-            fetchAllNodes()
+            fetchAllNotes()
         }
     }, [initDb])
 
@@ -636,7 +637,7 @@ export default function Home() {
                                                 </button>,
                                                 <button
                                                     type="button"
-                                                    className=" rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                                    className=" rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
                                                     onClick={() => deleteClick()}
                                                 >
                                                     DELETE
