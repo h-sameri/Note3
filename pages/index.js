@@ -28,12 +28,6 @@ const converter = new Showdown.Converter({
 const navigation = [
     {name: 'New note', href: '#', icon: DocumentPlusIcon, current: false},
 ]
-const notes2 = [
-    {id: 1, name: 'Note Title', href: '#', initial: 'N', current: false},
-    {id: 2, name: 'Another Note', href: '#', initial: 'N', current: false},
-    {id: 3, name: 'Third Note', href: '#', initial: 'N', current: false},
-]
-
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -380,32 +374,32 @@ export default function Home() {
                                                 </li>
                                                 <li>
                                                     <div className="text-xs font-semibold leading-6 text-gray-400">Your
-                                                        teams
+                                                        Notes
                                                     </div>
                                                     <ul role="list" className="-mx-2 mt-2 space-y-1">
-                                                        {notes2.map((note) => (
-                                                            <li key={note.name}>
-                                                                <a
-                                                                    href={note.href}
+                                                        {notes.map((note) => (
+                                                            <li key={note.data.title}
+                                                                onClick={() => fetchNote(note.id)}>
+                                                                <button
                                                                     className={classNames(
-                                                                        note.current
+                                                                        note.data.current
                                                                             ? 'bg-gray-50 text-indigo-600'
                                                                             : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50',
                                                                         'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                                                     )}
                                                                 >
-                                  <span
-                                      className={classNames(
-                                          note.current
-                                              ? 'text-indigo-600 border-indigo-600'
-                                              : 'text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600',
-                                          'flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white'
-                                      )}
-                                  >
-                                    {note.initial}
-                                  </span>
-                                                                    <span className="truncate">{note.name}</span>
-                                                                </a>
+                          <span
+                              className={classNames(
+                                  note.data.current
+                                      ? 'text-indigo-600 border-indigo-600'
+                                      : 'text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600',
+                                  'flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white'
+                              )}
+                          >
+                            {note.data.title ? note.data.title[0] : ''}
+                          </span>
+                                                                    <span className="truncate">{note.data.title}</span>
+                                                                </button>
                                                             </li>
                                                         ))}
                                                     </ul>
